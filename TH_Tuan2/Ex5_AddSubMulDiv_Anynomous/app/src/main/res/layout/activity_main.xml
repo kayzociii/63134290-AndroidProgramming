@@ -55,28 +55,24 @@
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="XuLyCong"
             android:text="+"/>
         <Button
             android:id="@+id/btnTru"
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="XuLyTru"
             android:text="-"/>
         <Button
             android:id="@+id/btnNhan"
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="XuLyNhan"
             android:text="*"/>
         <Button
             android:id="@+id/btnChia"
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="XuLyChia"
             android:text="/"/>
     </LinearLayout>
 
