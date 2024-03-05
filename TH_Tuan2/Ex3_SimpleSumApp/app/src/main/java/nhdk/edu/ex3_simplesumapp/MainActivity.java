@@ -27,6 +27,6 @@ public class MainActivity extends AppCompatActivity {
         int Tong = so_A + so_B;
         String strTong = String.valueOf(Tong);
 
-        editTextKetQua.setText(strTong);3
+        editTextKetQua.setText(strTong);
     }
 }
