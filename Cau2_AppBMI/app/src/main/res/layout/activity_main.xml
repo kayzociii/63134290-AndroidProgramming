@@ -73,5 +73,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBeoPhi" />
 
+    <TextView
+        android:id="@+id/txtChieuCao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="30dp"
+        android:text="Nhập chiều cao(cm)"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtThieuCan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtChieuCao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtCanDoi"
+        app:layout_constraintTop_toBottomOf="@+id/txtChieuCao" />
+
+    <TextView
+        android:id="@+id/txtCanNang"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="30dp"
+        android:text="Nhập cân nặng(kg)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtThuaCan"
+        app:layout_constraintTop_toBottomOf="@+id/edtChieuCao" />
+
+    <EditText
+        android:id="@+id/edtCanNang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtBeoPhi"
+        app:layout_constraintTop_toBottomOf="@+id/txtCanNang" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
