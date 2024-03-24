@@ -8,12 +8,70 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/txtThieuCan"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="105dp"
+        android:background="@color/Thieu_Can"
+        android:text="Thiếu cân (dưới 18.5)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCanDoi"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/Can_Doi"
+        android:text="Cân đối (18.5-dưới 25)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtThieuCan" />
+
+    <TextView
+        android:id="@+id/txtThuaCan"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/Thua_Can"
+        android:text="Thừa cân (25-dưới 30)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCanDoi" />
+
+    <TextView
+        android:id="@+id/txtBeoPhi"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/Beo_Phi"
+        android:text="Béo phì (30-dưới 35)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtThuaCan" />
+
+    <TextView
+        android:id="@+id/txtBeoPhiNguyHiem"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/Beo_Phi_Nguy_Hiem"
+        android:text="Béo phì nguy hiểm (trên 35)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBeoPhi" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
