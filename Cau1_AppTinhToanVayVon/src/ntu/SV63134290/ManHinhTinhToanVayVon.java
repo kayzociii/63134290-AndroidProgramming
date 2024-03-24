@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
@@ -21,7 +24,9 @@ public class ManHinhTinhToanVayVon extends JFrame {
 	private JTextField txtThoiHan;
 	private JTextField txtSoTienHangThang;
 	private JTextField txtTongTien;
-
+	private JComboBox<String> cbbNganHang;
+	private HashMap<String, Double> laiSuatNam;
+	
 	public ManHinhTinhToanVayVon() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 711, 671);
@@ -54,10 +59,24 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		lblNganHang.setBounds(63, 150, 179, 55);
 		contentPane.add(lblNganHang);
 		
-		JComboBox cbbNganHang = new JComboBox();
+
+		
+		String[] nganHang = {"Techcombank", "VPBank", "ACB", "TPBank", "HDBank", "Sacombank", "VIB", "SHB", "OCB"};
+		cbbNganHang = new JComboBox<>(nganHang);
+		cbbNganHang.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		cbbNganHang.setBounds(292, 163, 298, 36);
 		contentPane.add(cbbNganHang);
-		
+		cbbNganHang.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String chonNganHang = (String) cbbNganHang.getSelectedItem();
+                if (chonNganHang != null) {
+                    double LaiSuat = laiSuatNam.get(chonNganHang);
+                    txtLaiSuat.setText(LaiSuat + "%");
+                }
+            }
+        });
+
 		JLabel lblLaiSuat = new JLabel("Lãi suất(%/năm):");
 		lblLaiSuat.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblLaiSuat.setBounds(63, 207, 190, 55);
