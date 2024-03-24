@@ -28,6 +28,7 @@ public class ManHinhTinhToanVayVon extends JFrame {
 	private HashMap<String, Double> laiSuatNam;
 	
 	public ManHinhTinhToanVayVon() {
+		setTitle("CHƯƠNG TRÌNH TÍNH TOÁN KHOẢN VAY ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 711, 671);
 		contentPane = new JPanel();
