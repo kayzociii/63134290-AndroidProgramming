@@ -82,6 +82,7 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		lblLaiSuat.setBounds(63, 207, 190, 55);
 		contentPane.add(lblLaiSuat);
 		
+		
 		txtLaiSuat = new JTextField();
 		txtLaiSuat.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		txtLaiSuat.setEditable(false);
@@ -89,6 +90,18 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		txtLaiSuat.setBounds(292, 218, 298, 36);
 		contentPane.add(txtLaiSuat);
 		
+		//Thiết lập lãi suất tương ứng với ngân hàng
+		laiSuatNam = new HashMap<>();
+		laiSuatNam.put("Techcombank", 7.49);
+		laiSuatNam.put("VPBank", 6.9);
+		laiSuatNam.put("ACB", 9.0);
+		laiSuatNam.put("TPBank", 6.4);
+		laiSuatNam.put("HDBank", 6.8);
+		laiSuatNam.put("Sacombank", 8.5);
+		laiSuatNam.put("VIB", 8.3);
+		laiSuatNam.put("SHB", 8.5);
+		laiSuatNam.put("OCB", 5.99);
+		       
 		JLabel lblThoiHan = new JLabel("Thời hạn vay(tháng):");
 		lblThoiHan.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblThoiHan.setBounds(62, 264, 220, 55);
