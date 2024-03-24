@@ -33,6 +33,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void tinhBMI(){
+        String chieuCao = edtChieuCao.getText().toString();
+        String canNang = edtCanNang.getText().toString();
+
+        if(!chieuCao.isEmpty() && !canNang.isEmpty()){
+            float ChieuCao = Float.parseFloat(chieuCao);
+            float CanNang = Float.parseFloat(canNang);
+            float ChieuCaoM = ChieuCao/100;
+            float bmi = CanNang / (ChieuCaoM * ChieuCaoM);
+            inKetQua(bmi);
+        }
+        else{
+            txtKetQua.setText("Mời bạn nhập vào chiều cao và cân nặng!");
+        }
+    }
+
+    private void inKetQua(){
 
     }
 }
