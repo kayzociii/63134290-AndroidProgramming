@@ -171,8 +171,30 @@
         android:text="Thông tin của tôi:"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewFacebook"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
+    <ImageView
+        android:id="@+id/imageViewFacebook"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewGitHub"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/github"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
