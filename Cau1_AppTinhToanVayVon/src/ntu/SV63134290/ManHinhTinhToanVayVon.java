@@ -120,6 +120,13 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		btnTinh.setBounds(274, 338, 138, 55);
 		contentPane.add(btnTinh);
 		
+		btnTinh.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tinhLaiSuat();
+            }
+        });
+		
 		JLabel lblSoTienHangThang = new JLabel("Số tiền phải trả hàng tháng: ");
 		lblSoTienHangThang.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblSoTienHangThang.setBounds(63, 403, 337, 61);
@@ -143,5 +150,18 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		txtTongTien.setColumns(10);
 		txtTongTien.setBounds(210, 550, 298, 36);
 		contentPane.add(txtTongTien);
+	}
+	private void tinhLaiSuat() {
+		double tienCanVay = Double.parseDouble(txtSoTien.getText());
+        String nganHang = (String) cbbNganHang.getSelectedItem();
+        double laiSuat = laiSuatNam.get(nganHang);
+        double laiSuatPhanTram = laiSuat/100;
+        int soThang = Integer.parseInt(txtThoiHan.getText());
+        
+        double tienHangThang = (tienCanVay/12) + ((tienCanVay * laiSuatPhanTram)/12);
+        double tongTien = tienHangThang * soThang;
+        
+        txtSoTienHangThang.setText(String.format("%.2f", tienHangThang));
+        txtTongTien.setText(String.format("%.2f", tongTien));
 	}
 }
