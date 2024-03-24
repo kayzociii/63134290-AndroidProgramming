@@ -16,9 +16,11 @@ public class ManHinhTinhToanVayVon extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField txtSoTien;
+	private JTextField txtLaiSuat;
+	private JTextField txtThoiHan;
+	private JTextField txtSoTienHangThang;
+	private JTextField txtTongTien;
 
 	public ManHinhTinhToanVayVon() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,60 +32,84 @@ public class ManHinhTinhToanVayVon extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblchuongTrinh = new JLabel("CHƯƠNG TRÌNH TÍNH TOÁN KHOẢN VAY");
-		lblchuongTrinh.setForeground(Color.RED);
-		lblchuongTrinh.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblchuongTrinh.setBounds(94, 26, 508, 61);
-		contentPane.add(lblchuongTrinh);
+		JLabel lblChuongTrinh = new JLabel("CHƯƠNG TRÌNH TÍNH TOÁN KHOẢN VAY");
+		lblChuongTrinh.setForeground(Color.RED);
+		lblChuongTrinh.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblChuongTrinh.setBounds(94, 26, 508, 61);
+		contentPane.add(lblChuongTrinh);
 		
-		JLabel lblsoTien = new JLabel("Số tiền cần vay:");
-		lblsoTien.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblsoTien.setBounds(63, 107, 169, 55);
-		contentPane.add(lblsoTien);
+		JLabel lblSoTien = new JLabel("Số tiền cần vay:");
+		lblSoTien.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblSoTien.setBounds(63, 99, 169, 55);
+		contentPane.add(lblSoTien);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		textField.setColumns(10);
-		textField.setBounds(292, 118, 298, 36);
-		contentPane.add(textField);
+		txtSoTien = new JTextField();
+		txtSoTien.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		txtSoTien.setColumns(10);
+		txtSoTien.setBounds(292, 110, 298, 36);
+		contentPane.add(txtSoTien);
 		
-		JLabel lblnganHang = new JLabel("Chọn ngân hàng:");
-		lblnganHang.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblnganHang.setBounds(63, 172, 179, 55);
-		contentPane.add(lblnganHang);
+		JLabel lblNganHang = new JLabel("Chọn ngân hàng:");
+		lblNganHang.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNganHang.setBounds(63, 150, 179, 55);
+		contentPane.add(lblNganHang);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(292, 185, 298, 36);
-		contentPane.add(comboBox);
+		JComboBox cbbNganHang = new JComboBox();
+		cbbNganHang.setBounds(292, 163, 298, 36);
+		contentPane.add(cbbNganHang);
 		
-		JLabel lbllaiSuat = new JLabel("Lãi suất(%/năm):");
-		lbllaiSuat.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lbllaiSuat.setBounds(63, 237, 190, 55);
-		contentPane.add(lbllaiSuat);
+		JLabel lblLaiSuat = new JLabel("Lãi suất(%/năm):");
+		lblLaiSuat.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblLaiSuat.setBounds(63, 207, 190, 55);
+		contentPane.add(lblLaiSuat);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBounds(292, 248, 298, 36);
-		contentPane.add(textField_1);
+		txtLaiSuat = new JTextField();
+		txtLaiSuat.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		txtLaiSuat.setEditable(false);
+		txtLaiSuat.setColumns(10);
+		txtLaiSuat.setBounds(292, 218, 298, 36);
+		contentPane.add(txtLaiSuat);
 		
-		JLabel lblthoiHan = new JLabel("Thời hạn vay(tháng):");
-		lblthoiHan.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblthoiHan.setBounds(63, 302, 220, 55);
-		contentPane.add(lblthoiHan);
+		JLabel lblThoiHan = new JLabel("Thời hạn vay(tháng):");
+		lblThoiHan.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblThoiHan.setBounds(62, 264, 220, 55);
+		contentPane.add(lblThoiHan);
 		
-		textField_2 = new JTextField();
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		textField_2.setColumns(10);
-		textField_2.setBounds(292, 313, 298, 36);
-		contentPane.add(textField_2);
+		txtThoiHan = new JTextField();
+		txtThoiHan.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		txtThoiHan.setColumns(10);
+		txtThoiHan.setBounds(292, 275, 298, 36);
+		contentPane.add(txtThoiHan);
 		
 		JButton btnTinh = new JButton("TÍNH");
 		btnTinh.setForeground(Color.BLACK);
 		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 22));
 		btnTinh.setBackground(Color.RED);
-		btnTinh.setBounds(272, 378, 138, 55);
+		btnTinh.setBounds(274, 338, 138, 55);
 		contentPane.add(btnTinh);
+		
+		JLabel lblSoTienHangThang = new JLabel("Số tiền phải trả hàng tháng: ");
+		lblSoTienHangThang.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblSoTienHangThang.setBounds(63, 403, 337, 61);
+		contentPane.add(lblSoTienHangThang);
+		
+		txtSoTienHangThang = new JTextField();
+		txtSoTienHangThang.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		txtSoTienHangThang.setEditable(false);
+		txtSoTienHangThang.setColumns(10);
+		txtSoTienHangThang.setBounds(210, 458, 298, 36);
+		contentPane.add(txtSoTienHangThang);
+		
+		JLabel lblTongTien = new JLabel("Tổng số tiền phải trả:");
+		lblTongTien.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblTongTien.setBounds(63, 494, 220, 61);
+		contentPane.add(lblTongTien);
+		
+		txtTongTien = new JTextField();
+		txtTongTien.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		txtTongTien.setEditable(false);
+		txtTongTien.setColumns(10);
+		txtTongTien.setBounds(210, 550, 298, 36);
+		contentPane.add(txtTongTien);
 	}
 }
