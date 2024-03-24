@@ -48,7 +48,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void inKetQua(){
+    private void inKetQua(float bmi){
+        String kq;
+        if(bmi < 18.5){
+            kq = "Thiếu cân";
+        }
+        else if(bmi >= 18.5 && bmi < 25){
+            kq = "Cân đối";
+        }
+        else if(bmi >= 25 && bmi < 30){
+            kq = "Thừa cân";
+        }
+        else if(bmi >= 30 && bmi < 35){
+            kq = "Béo phì";
+        }
+        else{
+            kq = "Béo phì nguy hiểm";
+        }
 
+        txtKetQua.setText(String.format("BMI: %.1f\n %s", bmi , kq));
     }
 }
